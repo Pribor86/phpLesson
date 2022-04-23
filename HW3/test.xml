@@ -1,0 +1,81 @@
+<?xml version="1.0" standalone="yes"?>
+<test>
+    <question id="1">
+        <name>    первый вопрос</name>
+        <answer id="1">       ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1ервый ответ на вопрос 1первый ответ на вопрос 1</answer>
+        <answer id="2">     Второй &amp;       ответ       на вопрос 1         </answer>
+        <answer id="3">&#039; третий ответ на вопрос 1&#039;</answer>
+    </question>
+    <question id="2">
+        <name>Второй вопрос</name>
+        <answer id="1">Первый ответ на вопрос 2</answer>
+        <answer id="2">Второй ответ на вопрос 2</answer>
+    </question>
+    <question id="3">
+        <name>первый вопрос</name>
+        <answer id="1">первый ответ на вопрос 1</answer>
+        <answer id="2">Второй ответ на вопрос 1</answer>
+        <answer id="3">третий ответ на вопрос 1</answer>
+    </question>
+    <question id="4">
+        <name>Второй вопрос</name>
+        <answer id="1">Первый ответ на вопрос 2</answer>
+        <answer id="2">Второй ответ на вопрос 2</answer>
+    </question>
+    <question id="5">
+        <name>первый вопрос</name>
+        <answer id="1">первый ответ на вопрос 1</answer>
+        <answer id="2">Второй ответ на вопрос 1</answer>
+        <answer id="3">третий ответ на вопрос 1</answer>
+    </question>
+    <question id="6">
+        <name>Второй вопрос</name>
+        <answer id="1">Первый ответ на вопрос 2</answer>
+        <answer id="2">Второй ответ на вопрос 2</answer>
+    </question>
+    <question id="7">
+        <name>первый вопрос</name>
+        <answer id="1">первый ответ на вопрос 1</answer>
+        <answer id="2">Второй ответ на вопрос 1</answer>
+        <answer id="3">третий ответ на вопрос 1</answer>
+    </question>
+    <question id="8">
+        <name>Второй вопрос</name>
+        <answer id="1">Первый ответ на вопрос 2</answer>
+        <answer id="2">Второй ответ на вопрос 2</answer>
+    </question>
+    <question id="9">
+        <name>первый вопрос</name>
+        <answer id="1">первый ответ на вопрос 1</answer>
+        <answer id="2">Второй ответ на вопрос 1</answer>
+        <answer id="3">третий ответ на вопрос 1</answer>
+    </question>
+    <question id="10">
+        <name>Второй вопрос</name>
+        <answer id="1">Первый ответ на вопрос 2</answer>
+        <answer id="2">Второй ответ на вопрос 2</answer>
+    </question>
+    <question id="11">
+        <name>первый вопрос</name>
+        <answer id="1">первый ответ на вопрос 1</answer>
+        <answer id="2">Второй ответ на вопрос 1</answer>
+        <answer id="3">третий ответ на вопрос 1</answer>
+    </question>
+    <question id="12">
+        <name>Второй вопрос</name>
+        <answer id="1">Первый ответ на вопрос 2</answer>
+        <answer id="2">Второй ответ на вопрос 2</answer>
+    </question>
+    <question id="13">
+        <name>первый вопрос</name>
+        <answer id="1">первый ответ на вопрос 1</answer>
+        <answer id="2">Второй ответ на вопрос 1</answer>
+        <answer id="3">третий ответ на вопрос 1</answer>
+    </question>
+    <question id="14">
+        <name>Второй вопрос</name>
+        <answer id="1">Первый ответ на вопрос 2</answer>
+        <answer id="2">Второй ответ на вопрос 2</answer>
+    </question>
+
+</test>
