@@ -58,17 +58,16 @@ if (mysqli_query($db_connect, $insert_data)) {
 
 } else {
     echo mysqli_error($db_connect);
+    echo "<script>setTimeout('history.go(-1)',3000);</script>";
 }
 
 
 // close connection
     mysqli_close($db_connect);
-
-function jump_to(string $string)
-    {
-        global $first_name, $last_name;
-        echo "<script>setTimeout(\"location.href = 'index.php';\",3000);</script>";
-//    header("Location: $string");
-    }
-    jump_to($string);
+echo "<script>setTimeout(\"location.href = '$string';\",3000);</script>";
+//function jump_to(string $string)
+//    {
+//        echo "<script>setTimeout(\"location.href = '$string';\",3000);</script>";
+//    }
+//    jump_to($string);
 echo '</div>';
