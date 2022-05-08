@@ -54,19 +54,20 @@ if ($result = mysqli_query($db_connect, $sql)) {
 } else {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($db_connect);
 }
-
-
 // Close connection
 mysqli_close($db_connect);
 ?>
+    <form action="findByName.php?name=" method="post">
+        <input type="text" name="first_name" id="firstName" required placeholder="Insert name">
+        <input class="button" type="submit" value="Find by name">
+    </form>
     <form action="index.php" method="post">
         <input class="button" type="submit" value="Back">
     </form>
     <form action="del.php" method="post">
         <input class="button" type="submit" value="Delete all">
     </form>
+
 </div>
-
-
 </body>
 </html>
