@@ -13,26 +13,27 @@
 require_once("create_DB.php");
 ?>
 
-    <form action="add.php" method="post" onsubmit="return checkData();">
-        <p>
-            <label for="lastName">Last Name:</label>
-            <input type="text" name="last_name" id="lastName">
-        </p>
+    <form action="add.php" method="post">
+
         <p>
             <label for="firstName">First Name:</label>
-            <input type="text" name="first_name" id="firstName">
+            <input type="text" name="first_name" id="firstName" required>
+        </p>
+        <p>
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="last_name" id="lastName" required>
         </p>
         <p>
             <label for="isikukood">Isikukood:</label>
-            <input type="number" name="isikukood" id="isikukood">
+            <input type="number" name="isikukood" id="isikukood" required>
         </p>
         <p>
             <label for="grade">Grade:</label>
-            <input type="number" name="grade" id="grade">
+            <input type="number" name="grade" id="grade" required>
         </p>
         <p>
             <label for="emailAddress">Email Address:</label>
-            <input type="text" name="email" id="emailAddress">
+            <input type="text" name="email" id="emailAddress" required>
         </p>
         <p>
             <label for="message">Message:</label>
