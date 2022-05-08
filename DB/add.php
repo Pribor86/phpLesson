@@ -17,7 +17,7 @@ if ($db_connect === false) {
 
 function inputFormat($string): string
 {
-    return ucfirst(strtolower($string));
+    return mb_strtoupper(mb_substr($string, 0, 1)) . mb_substr($string, 1);
 }
 
 function control_letter_length($string):bool {
