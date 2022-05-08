@@ -1,3 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles/form.css">
+</head>
+<body>
+<div class="wrapper">
 <?php
 $db_host = "localhost";
 $db_user = "root";
@@ -42,5 +51,13 @@ if ($result = mysqli_query($db_connect, $sql)) {
     echo "ERROR: Could not able to execute $sql. " . mysqli_error($db_connect);
 }
 
+
 // Close connection
 mysqli_close($db_connect);
+?>
+    <button><a href="index.php">Back</a></button></button>
+</div>
+
+
+</body>
+</html>

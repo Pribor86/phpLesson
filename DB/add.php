@@ -2,39 +2,73 @@
 
 /* Attempt MySQL server connection. Assuming you are running MySQL
 server with default setting (user 'root' with no password) */
+echo '<link rel="stylesheet" type="text/css" href="styles/form.css"></head>';
+echo '<div class="wrapper">';
 $db_host = "localhost";
 $db_user = "root";
 $db_pass = "";
 $db_name = "user_DB";
 $db_connect = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-$string = "index.html";
+$string = "index.php";
 // Check connection
 if ($db_connect === false) {
     die("ERROR: Could not connect. " . mysqli_connect_error());
 }
 
+function inputFormat($string): string
+{
+    return ucfirst(strtolower($string));
+}
+
+function control_letter_length($string):bool {
+    if(strlen($string) != 11) {
+        echo ("<h2>Wrong isikukood.<br> It must contain 11 symbols. <br> You have entered $string(".strlen($string))." symbols).<br> Please, Try Again</h2>";
+        echo "<script>setTimeout('history.go(-1)',3000);</script>";
+        return false;
+    }
+    return true;
+}
+
+function control_email($string):bool {
+    if(!filter_var($string, FILTER_VALIDATE_EMAIL)) {
+        echo ("<h2>Wrong email.<br>You have entered $string.<br> Please, Try Again</h2>");
+        echo "<script>setTimeout('history.go(-1)',3000);</script>";
+        return false;
+    }
+    return true;
+}
+if(!control_letter_length(mysqli_real_escape_string($db_connect, $_REQUEST['isikukood']))
+    || !control_email(mysqli_real_escape_string($db_connect, $_REQUEST['email']))){
+    die($db_connect);
+}
+
 // Escape user inputs for security
-$first_name = mysqli_real_escape_string($db_connect, $_REQUEST['first_name']);
-$last_name = mysqli_real_escape_string($db_connect, $_REQUEST['last_name']);
+$first_name = inputFormat(mysqli_real_escape_string($db_connect, $_REQUEST['first_name']));
+$last_name = inputFormat(mysqli_real_escape_string($db_connect, $_REQUEST['last_name']));
 $isikukood = mysqli_real_escape_string($db_connect, $_REQUEST['isikukood']);
 $grade = mysqli_real_escape_string($db_connect, $_REQUEST['grade']);
-$email = mysqli_real_escape_string($db_connect, $_REQUEST['email']);
+$email = strtolower(mysqli_real_escape_string($db_connect, $_REQUEST['email']));
+$message = mysqli_real_escape_string($db_connect, $_REQUEST['message']);
 
 // attempt insert query execution
-$insert_data = "INSERT INTO students (last_name, first_name, isikukood, grade, email) VALUES ('$last_name', '$first_name', $isikukood, $grade, '$email')";
+$insert_data = "INSERT INTO students (last_name, first_name, isikukood, grade, email, message) VALUES ('$last_name', '$first_name', '$isikukood', '$grade', '$email', '$message')";
 if (mysqli_query($db_connect, $insert_data)) {
     echo "Records added successfully.";
+    echo "<h2>$first_name $last_name, you have been added to the database.</h2>";
+
 } else {
-    echo "ERROR: Could not able to execute $insert_data. " . mysqli_error($db_connect);
+    echo mysqli_error($db_connect);
 }
+
 
 // close connection
-mysqli_close($db_connect);
+    mysqli_close($db_connect);
+
 function jump_to(string $string)
-{
-    header("Location: $string");
-}
-
-jump_to($string);
-
-
+    {
+        global $first_name, $last_name;
+        echo "<script>setTimeout(\"location.href = 'index.php';\",3000);</script>";
+//    header("Location: $string");
+    }
+    jump_to($string);
+echo '</div>';

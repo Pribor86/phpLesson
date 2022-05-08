@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:300");
+* {
+    font-family: 'Nunito', sans-serif;
+}
+body {
+    overflow: hidden;
+    background-color: #27243D;
+}
+p {
+    color: #BABABA;
+}
+.wrapper {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: auto;
+    text-align: center;
+    display: grid;
+    color: white;
+    box-shadow: 3px 10px 20px 5px rgba(255, 255, 255, 0.3);
+    padding: 10px;
+}
+.wrapper:hover {
+    box-shadow: 3px 10px 20px 5px rgba(255, 255, 255, 0.5);
+}
+label {
+    font-size: 20px;
+    float: left;
+    margin-left: 25px;
+}
+input {
+    width: 80%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.1);
+    color: #BABABA;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    /*box-shadow: inset 3px 10px 20px 5px rgba(255, 255, 255, 0.1);*/
+    -webkit-box-shadow:inset 0 0 10px #000;
+    -moz-box-shadow:inset 0 0 10px #000;
+    box-shadow:inset 0 0 10px #000;
+    user-select: none;
+    appearance: none;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+    border: none;
+    -webkit-text-fill-color: #BABABA;
+    transition: background-color 5000s ease-in-out 0s;
+}
+input:hover{
+    -webkit-box-shadow:inset 0 0 10px #FFF;
+    -moz-box-shadow:inset 0 0 10px #FFF;
+    /*box-shadow: 3px 10px 20px 5px rgba(255, 255, 255, 0.3);*/
+}
+input:focus {
+    outline: none;
+}
+/*input arrows hide*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+.button {
+    width: 60%;
+    height: 30px;
+    border: none;
+    border-radius: 20px;
+    color: #BABABA;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 10px 20px 5px rgba(255, 255, 255, 0.2);
+    user-select: none;
+    appearance: none;
+}
+.button:hover {
+    box-shadow: 3px 10px 20px 5px rgba(255, 255, 255, 0.5);
+}
+textarea{
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.1);
+    color: white;
+    font-size: 20px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+    box-shadow: 3px 10px 20px 5px rgba(255, 255, 255, 0.1);
+    user-select: none;
+    resize: none;
+}
+textarea:hover{
+    box-shadow: 3px 10px 20px 5px rgba(255, 255, 255, 0.5);
+}
+textarea:focus {
+    outline: none;
+}
+textarea::-webkit-scrollbar {
+    width: 0.5em;
+    border-radius: 40px;
+    padding-right: 20px;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 40px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+    border-radius: 40px;
+}

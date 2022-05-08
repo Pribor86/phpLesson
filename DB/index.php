@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/valid.js"></script>
+    <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
+<div class="wrapper">
 <div>
 <?php
 require_once("create_DB.php");
 ?>
-    <form action="add.php" method="post">
+
+    <form action="add.php" method="post" onsubmit="return checkData();">
         <p>
             <label for="lastName">Last Name:</label>
             <input type="text" name="last_name" id="lastName">
@@ -30,12 +34,19 @@ require_once("create_DB.php");
             <label for="emailAddress">Email Address:</label>
             <input type="text" name="email" id="emailAddress">
         </p>
-        <input type="submit" value="Add Records">
+        <p>
+            <label for="message">Message:</label>
+            <textarea name="message" id="message" cols="30" rows="2"></textarea>
+        </p>
+        <input class="button" type="submit" value="Submit">
+        <input class="button" type="reset" value="Clear Form">
     </form>
+</div>
+<div>
     <form action="getAllUser.php" method="post">
-        <input type="submit" value="Get all persons">
-
+        <input class="button" type="submit" value="Get all persons">
     </form>
+</div>
 </div>
 
 

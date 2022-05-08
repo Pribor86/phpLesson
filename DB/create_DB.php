@@ -17,17 +17,17 @@ if($db_connect === false){
 // Attempt create database query execution
 $sql = "CREATE DATABASE $db_name";
 if(mysqli_query($db_connect, $sql)){
-    echo "Database created successfully";
+//    echo "Database created successfully";
 } else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($db_connect);
+//    echo "ERROR: Could not able to execute $sql. " . mysqli_error($db_connect);
 }
 
 $db_connect = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
 $student_SQL = file_get_contents('students.sql');
 if(mysqli_query($db_connect, $student_SQL)){
-    echo "Table created successfully";
+//    echo "Table created successfully";
 } else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($db_connect);
+//    echo "ERROR: Could not able to execute $sql. " . mysqli_error($db_connect);
 }
 
 // Close connection
