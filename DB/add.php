@@ -22,8 +22,8 @@ function inputFormat($string): string
 
 function control_letter_length($string):bool {
     if(strlen($string) != 11) {
-        echo ("<h2>Wrong isikukood.<br> It must contain 11 symbols. <br> You have entered $string(".strlen($string))." symbols).<br> Please, Try Again</h2>";
-        echo "<script>setTimeout('history.go(-1)',3000);</script>";
+        echo ("<h2>Wrong isikukood.<br> It should be 11 symbols. <br> You have entered $string(".strlen($string))." symbols).<br> Please, Try Again</h2>";
+//        echo "<script>setTimeout('history.go(-1)',3000);</script>";
         return false;
     }
     return true;
@@ -32,14 +32,16 @@ function control_letter_length($string):bool {
 function control_email($string):bool {
     if(!filter_var($string, FILTER_VALIDATE_EMAIL)) {
         echo ("<h2>Wrong email.<br>You have entered $string.<br> Please, Try Again</h2>");
-        echo "<script>setTimeout('history.go(-1)',3000);</script>";
+//        echo "<script>setTimeout('history.go(-1)',3000);</script>";
         return false;
     }
     return true;
 }
 if(!control_letter_length(mysqli_real_escape_string($db_connect, $_REQUEST['isikukood']))
     || !control_email(mysqli_real_escape_string($db_connect, $_REQUEST['email']))){
+    echo "<script>setTimeout('history.go(-1)',3000);</script>";
     die($db_connect);
+
 }
 
 // Escape user inputs for security
